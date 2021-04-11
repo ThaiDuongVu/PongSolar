@@ -108,8 +108,6 @@ void App::Update()
 	if (!game_started) return;
 	if (game_over) return;
 
-	viewport.Move(Vector2((double)Input::IsKeyDown(Input::Keys::KeyRight) - (double)Input::IsKeyDown(Input::Keys::KeyLeft), 0.0f) * Time::FrameTime());
-
 	// Move players with keyboard input
 	player1.Move(Vector2(0.0f, (double)Input::IsKeyDown(Input::Keys::KeyW) - (double)Input::IsKeyDown(Input::Keys::KeyS)) * PLAYER_SPEED * Time::FrameTime());
 	player2.Move(Vector2(0.0f, (double)Input::IsKeyDown(Input::Keys::KeyUp) - (double)Input::IsKeyDown(Input::Keys::KeyDown)) * PLAYER_SPEED * Time::FrameTime());
